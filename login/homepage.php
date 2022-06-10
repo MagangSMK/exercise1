@@ -10,9 +10,9 @@ include_once("../config/config.php");
  
 <body>
 <a
-            href="../public/transaksi/add.php"
+            href="../public/cucian/add.php"
             type="submit"
-            class="inline-block px-4 py-3 bg-blue-600 text-white uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light">
             Tambah Cucian
@@ -22,10 +22,10 @@ include_once("../config/config.php");
     <input type="text" name="cari">
     <input
             name="cari"
-            href="../public/karyawan/add.php"
+            href="../public/cucian/add.php"
             type="submit"
             value="Cari"
-            class="inline-block px-3 py-2 bg-blue-600 text-white uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light">
 </form>
@@ -40,10 +40,10 @@ if(isset($_GET['cari'])){
     <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
       <div class="overflow-hidden">
     <table class="min-w-full text-center">
-    <thead class="border-b ">
+    <thead class="border-b bg-gray-800"">
 
     <tr>
-     <th scope="col" class="text-sm font-medium text-red-600 px-6 py-4">kode Cucian</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">kode Cucian</th> 
      <th scope="col" class="text-sm font-medium text-white px-6 py-4">Jumlah Potong</th>
      <th scope="col" class="text-sm font-medium text-white px-6 py-4">Jenis Cucian</th> 
      <th scope="col" class="text-sm font-medium text-white px-6 py-4">Berat Kg</th> 
@@ -83,7 +83,7 @@ if(isset($_GET['cari'])){
     <a
             href="../public/karyawan/add.php"
             type="submit"
-            class="inline-block px-4 py-3 bg-blue-600 text-white uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light">
             Add New Karyawan 
@@ -91,7 +91,14 @@ if(isset($_GET['cari'])){
 <form method="get">
     <label>Cari :</label>
     <input type="text" name="cari1">
-    <input type="submit" value="Cari">
+    <input
+            name="cari1"
+            href="../public/karyawan/add.php"
+            type="submit"
+            value="Cari"
+            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
 </form>
 <?php
 if(isset($_GET['cari1'])){
@@ -146,7 +153,7 @@ if(isset($_GET['cari1'])){
     <a
             href="../public/Pelanggan/add.php"
             type="submit"
-            class="inline-block px-4 py-3 bg-blue-600 text-white uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light">
             Add New Pelanggan 
@@ -154,7 +161,14 @@ if(isset($_GET['cari1'])){
 <form method="get">
     <label>Cari :</label>
     <input type="text" name="cari3">
-    <input type="submit" value="Cari">
+    <input
+            name="cari3"
+            href="../public/pelanggan/add.php"
+            type="submit"
+            value="Cari"
+            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
 </form>
 <?php
 if(isset($_GET['cari3'])){
@@ -204,9 +218,9 @@ if(isset($_GET['cari3'])){
     <br> 
  
     <a
-            href="../public/karyawan/add.php"
+            href="../public/transaksi/add.php"
             type="submit"
-            class="inline-block px-4 py-3 bg-blue-600 text-white uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light">
             Add New Transaksi 
@@ -214,7 +228,14 @@ if(isset($_GET['cari3'])){
 <form method="get">
     <label>Cari :</label>
     <input type="text" name="cari2">
-    <input type="submit" value="Cari">
+    <input
+            name="cari2"
+            href="../public/transaksi/add.php"
+            type="submit"
+            value="Cari"
+            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
 </form>
 <?php
 if(isset($_GET['cari2'])){
@@ -265,7 +286,7 @@ if(isset($_GET['cari2'])){
     <a
             href="../login/logout.php"
             type="submit"
-            class="inline-block px-3 py-2 bg-blue-600 text-white uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+            class="inline-block px-3 py-2 bg-red-600 text-white uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light">
             Log Out

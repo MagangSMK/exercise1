@@ -1,9 +1,6 @@
 <?php
 include_once("config/config.php");
 ?>
-<?php
-include_once("config/config.php");
-?>
 <html></html>
 <head>
 	<title>Membuat Login</title>
@@ -57,9 +54,9 @@ placeholder="masukkan password"
                 >Remember me</label>	
                 <td>|</td>	
                 <a
-              href="#!"
+              href="register/register.php"
               class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
-              >Forgot password?</a>
+              >Don't have an account?,Please register</a>
               <!--tombol submit-->
               <button
             type="submit"

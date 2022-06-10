@@ -5,10 +5,18 @@ include_once("../../config/config.php");
 <head>
     
 	<title>Add data</title>
+	<link rel="stylesheet" href="..//css/style.css">
 </head>
  
 <body>
-	<a href="../../login/homepage.php">Go to Home</a>
+<a
+            href="../../login/homepage.php"
+            type="submit"
+            class="inline-block px-3 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+            Go to homepage
+          </a>
 	<br/><br/>
  
 	<form action="add.php" method="post" name="form1">
@@ -35,8 +43,8 @@ include_once("../../config/config.php");
 			</tr>
 			<tr> 
 				<td></td>
-				<td><input type="submit" name="Submit" value="Add"></td>
-			</tr>
+			<td><input type="submit" name="Submit" value="Add" class="inline-block px-6 py-2.5 bg-slate-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"></td>
+			</tr>		
 		</table>
 	</form>
 	
