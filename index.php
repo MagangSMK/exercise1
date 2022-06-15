@@ -5,6 +5,7 @@ include_once("config/config.php");
 <head>
 	<title>Membuat Login</title>
 	<link rel="stylesheet" href="public/css/style.css"	>
+  
 </head>
 <body>
 	<secttion class="h-screen">
@@ -12,10 +13,14 @@ include_once("config/config.php");
     <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
       <div class="md:w-6/8 lg:w-6/8 mb-10 md:mb-0">
         <table>
-      <div class="mb-1">
-        <tr class="align-middle">
-        <img src="pic/images.jpg" class=" max-w-full h-auto rounded-full" alt="">
-        </tr>
+        <div class="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
+        <img
+          src="pic/draw.svg"
+          class="w-full"
+          alt="Phone image"
+        />
+      </div>
+      
       </div>
   </table>
 <!--username input-->

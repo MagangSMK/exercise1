@@ -6,9 +6,11 @@ include_once("../config/config.php");
 <head>    
     <title>Homepage</title>
     <link rel="stylesheet" href="../public/css/style.css"	>
+    
 </head> 
  
 <body>
+<div class="bg-slate-300 py-25 px-1 min-h-screen ">
 <a
             href="../public/cucian/add.php"
             type="submit"
@@ -283,7 +285,11 @@ if(isset($_GET['cari2'])){
     ?>
     </tbody>
     </table>
-    <a
+      </div>
+    </div>
+  </div>
+</div>
+<a
             href="../login/logout.php"
             type="submit"
             class="inline-block px-3 py-2 bg-red-600 text-white uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
@@ -291,9 +297,6 @@ if(isset($_GET['cari2'])){
             data-mdb-ripple-color="light">
             Log Out
           </a>
-      </div>
-    </div>
-  </div>
 </div>
 </body>
 </html>

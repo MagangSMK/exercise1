@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang="en">
 <head>
-	
+<link rel="stylesheet" href="../public/css/style.css"	>
 </head>
 	<div class="form-register">
 		<div class="register">
