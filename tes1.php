@@ -1,110 +1,130 @@
-<section class="h-screen">
-  <div class="container px-6 py-12 h-full">
-    <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
-      <div class="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-          class="w-full"
-          alt="Phone image"
-        />
-      </div>
-      <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-        <form>
-          <!-- Email input -->
-          <div class="mb-6">
-            <input
-              type="text"
-              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              placeholder="Email address"
-            />
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
-          <!-- Password input -->
-          <div class="mb-6">
-            <input
-              type="password"
-              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              placeholder="Password"
-            />
-          </div>
+<!-- Nucleo Icons -->
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 
-          <div class="flex justify-between items-center mb-6">
-            <div class="form-group form-check">
-              <input
-                type="checkbox"
-                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                id="exampleCheck3"
-                checked
-              />
-              <label class="form-check-label inline-block text-gray-800" for="exampleCheck2"
-                >Remember me</label
-              >
-            </div>
-            <a
-              href="#!"
-              class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
-              >Forgot password?</a
-            >
-          </div>
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
-          <!-- Submit button -->
-          <button
-            type="submit"
-            class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light"
-          >
-            Sign in
-          </button>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
-          <div
-            class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
-          >
-            <p class="text-center font-semibold mx-4 mb-0">OR</p>
-          </div>
+<!-- CSS Files -->
 
-          <a
-            class="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
-            style="background-color: #3b5998"
-            href="#!"
-            role="button"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light"
-          >
-            <!-- Facebook -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 320 512"
-              class="w-3.5 h-3.5 mr-2"
-            >
-              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-              <path
-                fill="currentColor"
-                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-              /></svg>Continue with Facebook
-          </a>
-          <a
-            class="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
-            style="background-color: #55acee"
-            href="#!"
-            role="button"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light"
-          >
-            <!-- Twitter -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              class="w-3.5 h-3.5 mr-2"
-            >
-              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-              <path
-                fill="currentColor"
-                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-              /></svg>Continue with Twitter
-          </a>
-        </form>
-      </div>
+
+
+<link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+
+</head>
+<body class="g-sidenav-show  bg-gray-100" >
+  <div name="label">
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+
+<div class="sidenav-header">
+  <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+  <a class="navbar-brand m-0" href="" target="_blank">
+    <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+    <span class="ms-1 font-weight-bold text-white">Home Page</span>
+  </a>
+</div>
+
+
+<hr class="horizontal light mt-0 mb-2">
+
+<div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+  <ul class="navbar-nav">
+    
+
+    
+      
+
+        
+
+        
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./login/homepage.php">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">dashboard</i>
     </div>
+  
+  <span class="nav-link-text ms-1">Tabel Cucian</span>
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./tables.html">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">table_view</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Tabel Karyawan</span>
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./billing.html">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">receipt_long</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Tabel Pelanggan</span>
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./virtual-reality.html">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">view_in_ar</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Tabel Transaksi</span>
+</a>
+</li>
+  <li class="nav-item mt-3">
+    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
+  </li>
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./profile.html">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">person</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Profile</span>
+</a>
+</li>
+  </ul>
+</div>
+<div class="sidenav-footer position-absolute w-100 bottom-0 ">
+    <div class="mx-3">
+      <a class="btn bg-gradient-primary mt-4 w-100" href="#" type="button">Log Out</a>
+    </div>
+    
   </div>
-</section>
+  
+</aside>
+<main class="main-content border-radius-lg ">
+<div class="align-middle" name="home" ><h1>Selamat datang</h1></div>
+</div>
+</body>
+</html>
+<!--     Fonts and icons     -->
+
+

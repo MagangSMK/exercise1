@@ -8,18 +8,17 @@ include_once("config/config.php");
   
 </head>
 <body>
+  
 	<secttion class="h-screen">
 	<div class="container px-6 py-12 h-full">
     <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
       <div class="md:w-6/8 lg:w-6/8 mb-10 md:mb-0">
         <table>
-        <div class="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
-        <img
-          src="pic/draw.svg"
-          class="w-full"
-          alt="Phone image"
-        />
-      </div>
+        <div class="mb-4">
+    <td><img src="pic/images.jpg" class="max-w-full h-auto rounded-full" alt=""></td>
+    <td><img src="pic/images.jpg" class="max-w-full h-auto rounded-full" alt=""></td>
+    <td><img src="pic/images.jpg" class="max-w-full h-auto rounded-full" alt=""></td>
+  </div>
       
       </div>
   </table>
