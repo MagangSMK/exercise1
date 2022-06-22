@@ -7,7 +7,7 @@ include_once("config/config.php");
 	<link rel="stylesheet" href="public/css/style.css"	>
   
 </head>
-<body>
+<body class="bg-gray-200 py-25 px-1 min-h-screen ">
   
 	<secttion class="h-screen">
 	<div class="container px-6 py-12 h-full">
@@ -40,7 +40,8 @@ placeholder=" masukkan username"
 </div>
 <!--password-->
 <div class="mb-6">
-<input type="password" 
+<input
+type="password" 
 class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
 name="sandi" 
 placeholder="masukkan password"

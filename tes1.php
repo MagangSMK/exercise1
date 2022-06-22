@@ -24,14 +24,15 @@
 <link id="pagestyle" href="./assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
 
 </head>
-<body class="g-sidenav-show  bg-gray-100" >
-  <div name="label">
+<body class="g-sidenav-show" >
+<div class="bg-slate-300 py-25 px-1 min-h-screen ">
+  
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
 
 <div class="sidenav-header">
   <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-  <a class="navbar-brand m-0" href="" target="_blank">
-    <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+  <a class="navbar-brand m-0" href="/login/homepage.php">
+    <img src="../../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
     <span class="ms-1 font-weight-bold text-white">Home Page</span>
   </a>
 </div>
@@ -51,7 +52,7 @@
         
 
 <li class="nav-item">
-<a class="nav-link text-white " href="./login/homepage.php">
+<a class="nav-link text-white " href="public/cucian/cucian.php">
   
     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
       <i class="material-icons opacity-10">dashboard</i>
@@ -63,10 +64,10 @@
 
 
 <li class="nav-item">
-<a class="nav-link text-white " href="./tables.html">
+<a class="nav-link text-white " href="public/karyawan/karyawan.php">
   
     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-      <i class="material-icons opacity-10">table_view</i>
+      <i class="material-icons opacity-10">person</i>
     </div>
   
   <span class="nav-link-text ms-1">Tabel Karyawan</span>
@@ -75,10 +76,10 @@
 
 
 <li class="nav-item">
-<a class="nav-link text-white " href="./billing.html">
+<a class="nav-link text-white " href="public/pelanggan/pelanggan.php">
   
     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-      <i class="material-icons opacity-10">receipt_long</i>
+      <i class="material-icons opacity-10">person</i>
     </div>
   
   <span class="nav-link-text ms-1">Tabel Pelanggan</span>
@@ -87,10 +88,10 @@
 
 
 <li class="nav-item">
-<a class="nav-link text-white " href="./virtual-reality.html">
+<a class="nav-link text-white " href="public/transaksi/transaksi.php">
   
     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-      <i class="material-icons opacity-10">view_in_ar</i>
+      <i class="material-icons opacity-10">receipt_long</i>
     </div>
   
   <span class="nav-link-text ms-1">Tabel Transaksi</span>
@@ -114,7 +115,7 @@
 </div>
 <div class="sidenav-footer position-absolute w-100 bottom-0 ">
     <div class="mx-3">
-      <a class="btn bg-gradient-primary mt-4 w-100" href="#" type="button">Log Out</a>
+      <a class="btn bg-gradient-primary mt-4 w-100" href="/login/logout.php" type="button">Log Out</a>
     </div>
     
   </div>
@@ -122,7 +123,6 @@
 </aside>
 <main class="main-content border-radius-lg ">
 <div class="align-middle" name="home" ><h1>Selamat datang</h1></div>
-</div>
 </body>
 </html>
 <!--     Fonts and icons     -->

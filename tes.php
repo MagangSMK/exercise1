@@ -1,49 +1,412 @@
 <?php
-include_once("config/config.php");
+include_once("../config/config.php");
 ?>
-<html>
-<head>
-    
-	<title>Add data</title>
-	<link rel="stylesheet" href="public/css/style.css"	>
-</head>
  
-<body>
-	
-<frameset frame spacing="0" rows="10%,80%,10%">
-<frameset cols="280,*">	
-<frame name="menu1" scrolling="no" noresize src="./pages/list_menu.html">
-<frame name="menu2" noresize src="./pages/home.php">
-</frameset>
-</frameset>
+<html>
+<head>    
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../public/css/style.css"	>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
-<div class="w-60 h-full shadow-md bg-white px-1 absolute">
-  <ul class="relative">
-    <li class="relative">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" href="index.php" data-mdb-ripple="true" data-mdb-ripple-color="dark">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path>
-        </svg>
-        <span>Sidenav link 1</span>
-      </a>
-    </li>
-    <li class="relative">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-          <path fill="currentColor" d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path>
-        </svg>
-        <span>Sidenav link 2</span>
-      </a>
-    </li>
-    <li class="relative">
-      <a class="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out" href="#!" data-mdb-ripple="true" data-mdb-ripple-color="dark">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" class="w-3 h-3 mr-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path fill="currentColor" d="M192 208c0-17.67-14.33-32-32-32h-16c-35.35 0-64 28.65-64 64v48c0 35.35 28.65 64 64 64h16c17.67 0 32-14.33 32-32V208zm176 144c35.35 0 64-28.65 64-64v-48c0-35.35-28.65-64-64-64h-16c-17.67 0-32 14.33-32 32v112c0 17.67 14.33 32 32 32h16zM256 0C113.18 0 4.58 118.83 0 256v16c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-16c0-114.69 93.31-208 208-208s208 93.31 208 208h-.12c.08 2.43.12 165.72.12 165.72 0 23.35-18.93 42.28-42.28 42.28H320c0-26.51-21.49-48-48-48h-32c-26.51 0-48 21.49-48 48s21.49 48 48 48h181.72c49.86 0 90.28-40.42 90.28-90.28V256C507.42 118.83 398.82 0 256 0z"></path>
-        </svg>
-        <span>Sidenav link 3</span>
-      </a>
-    </li>
+<!-- Nucleo Icons -->
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
+
+</head> 
+ 
+<body class="g-sidenav-show" >
+<div class="bg-slate-300 py-25 px-1 min-h-screen ">
+  
+<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+
+<div class="sidenav-header">
+  <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+  <a class="navbar-brand m-0" href="" target="_blank">
+    <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+    <span class="ms-1 font-weight-bold text-white">Home Page</span>
+  </a>
+</div>
+
+
+<hr class="horizontal light mt-0 mb-2">
+
+<div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+  <ul class="navbar-nav">
+    
+
+    
+      
+
+        
+
+        
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./login/homepage.php">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">dashboard</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Tabel Cucian</span>
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./tables.html">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">person</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Tabel Karyawan</span>
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./billing.html">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">person</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Tabel Pelanggan</span>
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./virtual-reality.html">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">receipt_long</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Tabel Transaksi</span>
+</a>
+</li>
+  <li class="nav-item mt-3">
+    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
+  </li>
+
+<li class="nav-item">
+<a class="nav-link text-white " href="./profile.html">
+  
+    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+      <i class="material-icons opacity-10">person</i>
+    </div>
+  
+  <span class="nav-link-text ms-1">Profile</span>
+</a>
+</li>
   </ul>
 </div>
+<div class="sidenav-footer position-absolute w-100 bottom-0 ">
+    <div class="mx-3">
+      <a class="btn bg-gradient-primary mt-4 w-100" href="#" type="button">Log Out</a>
+    </div>
+    
+  </div>
+  
+</aside>
+<main class="main-content border-radius-lg ">
+
+
+<a
+            href="../public/cucian/add.php"
+            type="submit"
+            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+            Tambah Cucian
+          </a>
+<form method="get">
+    <label>Cari :</label>
+    <input type="text" name="cari">
+    <input
+            name="cari"
+            href="../public/cucian/add.php"
+            type="submit"
+            value="Cari"
+            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+</form>
+<div name="kolom1">
+<?php
+if(isset($_GET['cari'])){
+      $cari = $_GET['cari'];
+      echo "<b>Hasil pencarian : ".$cari."</b>";
+}
+ ?>
+ <div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+    <table class="min-w-full text-center">
+    <thead class="border-b bg-gray-800"">
+
+    <tr>
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">kode Cucian</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Jumlah Potong</th>
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Jenis Cucian</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Berat Kg</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Harga</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Update</th> 
+    </tr>
+    </thead>
+<tbody>
+    
+    <?php
+    if(isset($_GET['cari'])){
+        $cari = $_GET['cari'];
+        $result = mysqli_query($mysqli,"select * from cucian where kodecucian Like '%".$cari."%'");
+    }  else{
+        $result = mysqli_query($mysqli, "SELECT * FROM cucian ORDER BY kodecucian asc");
+    }
+    while($user_data = mysqli_fetch_array($result)) {         
+        echo "<tr class='bg-white border-b' >";
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900' >".$kodecucian = $user_data['kodecucian']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$jumlahpotong =$user_data['jumlahpotong']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$jeniscucian = $user_data['jeniscucian']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$berat = $user_data['berat_kg']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$harga = $user_data['harga']."</td>"; 
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'><a  href=' ../public/cucian/edit.php?kodecucian=$user_data[kodecucian]'>Edit</a> | <a href='../public/cucian/delete.php?kodecucian=$user_data[kodecucian]'>Delete</a></td></tr>";        
+    }
+    ?>
+</tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+
+    <a
+            href="../public/karyawan/add.php"
+            type="submit"
+            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+            Add New Karyawan 
+          </a>
+<form method="get">
+    <label>Cari :</label>
+    <input type="text" name="cari1">
+    <input
+            name="cari1"
+            href="../public/karyawan/add.php"
+            type="submit"
+            value="Cari"
+            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+</form>
+<?php
+if(isset($_GET['cari1'])){
+      $cari1 = $_GET['cari1'];
+      echo "<b>Hasil pencarian : ".$cari1."</b>";
+}
+ ?>
+    <div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+    <table class="min-w-full text-center">
+    <thead class="border-b bg-gray-800">
+
+    <tr>
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">kode Karyawan</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Nama Karyawan</th>
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Jenis Kelamin</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Alamat</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">kota</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Jabatan</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Update</th> 
+    </tr>
+        
+    <?php
+        if(isset($_GET['cari1'])){
+            $cari1 = $_GET['cari1'];
+            $result1 = mysqli_query($mysqli,"select * from karyawan where kodekaryawan Like '%".$cari1."%'");
+        } else{
+            $result1 = mysqli_query($mysqli, "SELECT * FROM karyawan ORDER BY kodekaryawan ASC");
+        }
+    while($user_data1 = mysqli_fetch_array($result1)) {         
+        echo "<tr class='bg-white border-b'>";
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$kodekaryawan = $user_data1['kodekaryawan']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$namakaryawan =$user_data1['namakaryawan']."</td>";
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$jeniskelamin = $user_data1['jeniskelamin']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$alamat = $user_data1['alamat']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$kota = $user_data1['kota']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$jabatan = $user_data1['jabatan']."</td>";    
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'><a  href=' ../public/karyawan/edit.php?kodekaryawan=$user_data1[kodekaryawan]'>Edit</a> | <a href='../public/karyawan/delete.php?kodekaryawan=$user_data1[kodekaryawan]'>Delete</a></td></tr>";
+    }
+    ?>
+    </thead>
+    </table>
+      </div>
+    </div>
+  </div>
+    </div>
+    <br>
+    <br>
+
+    <a
+            href="../public/Pelanggan/add.php"
+            type="submit"
+            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+            Add New Pelanggan 
+          </a>
+<form method="get">
+    <label>Cari :</label>
+    <input type="text" name="cari3">
+    <input
+            name="cari3"
+            href="../public/pelanggan/add.php"
+            type="submit"
+            value="Cari"
+            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+</form>
+<?php
+if(isset($_GET['cari3'])){
+      $cari3 = $_GET['cari3'];
+      echo "<b>Hasil pencarian : ".$cari3."</b>";
+}
+ ?>
+  <div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+    <table class="min-w-full text-center">
+    <thead class="border-b bg-gray-800">
+    <tr>
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">kode Pelanggan</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Nama Pelanggan</th>
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Alamat</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Telepon</th>  
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Update</th> 
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+        if(isset($_GET['cari3'])){
+            $cari3 = $_GET['cari3'];
+            $result2 = mysqli_query($mysqli,"select * from pelanggan where kodepelanggan Like '%".$cari3."%'");
+        } else{
+            $result2 = mysqli_query($mysqli, "SELECT * FROM pelanggan ORDER BY kodepelanggan ASC");
+        }
+    while($user_data2 = mysqli_fetch_array($result2)) {         
+        echo "<tr class='bg-white border-b'>";
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$kodepelanggan = $user_data2['kodepelanggan']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$namapelanggan =$user_data2['namapelanggan']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$alamat = $user_data2['alamat']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$telepon = $user_data2['telepon']."</td>";    
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'><a  href='../public/pelanggan/edit.php?kodepelanggan=$user_data2[kodepelanggan]'>Edit</a> | <a href='../public/pelanggan/delete.php?kodepelanggan=$user_data2[kodepelanggan]'>Delete</a></td></tr>";
+    }
+    ?>
+    </tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+  </div>
+
+    <br>
+    <br> 
+ 
+    <a
+            href="../public/transaksi/add.php"
+            type="submit"
+            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+            Add New Transaksi 
+          </a>
+<form method="get">
+    <label>Cari :</label>
+    <input type="text" name="cari2">
+    <input
+            name="cari2"
+            href="../public/transaksi/add.php"
+            type="submit"
+            value="Cari"
+            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+</form>
+<?php
+if(isset($_GET['cari2'])){
+      $cari2 = $_GET['cari2'];
+      echo "<b>Hasil pencarian : ".$cari2."</b>";
+}
+ ?>
+<div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+    <table class="min-w-full text-center">
+    <thead class="border-b bg-gray-800">
+
+    <tr>
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">kode Transaksi</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Kode karyawan</th>
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Kode Pelanggan</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Kode Cucian</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">tanggal Masuk</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Tanggal Keluar</th> 
+     <th scope="col" class="text-sm font-medium text-white px-6 py-4">Jumlah</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php  
+    if(isset($_GET['cari2'])){
+        $cari2 = $_GET['cari2'];
+        $result3 = mysqli_query($mysqli,"select * from transaksi where kodetransaksi Like '%".$cari2."%'");
+    } else{
+        $result3 = mysqli_query($mysqli, "SELECT * FROM transaksi ORDER BY kodetransaksi ASC");
+    }
+    while($user_data3 = mysqli_fetch_array($result3)) {         
+        echo "<tr class='bg-white border-b' >";
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$kodetransaksi = $user_data3['kodetransaksi']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$kodekaryawan =$user_data3['kodekaryawan']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$kodepelanggan = $user_data3['kodepelanggan']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$kodecucian = $user_data3['kodecucian']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$tanggalmasuk = $user_data3['tanggalmasuk']."</td>";
+		echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$tanggalkeluar = $user_data3['tanggalkeluar']."</td>";
+        echo "<td class='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900'>".$jumlah1 = $user_data3['jumlah']."</td>"; 
+        
+        
+    } 
+    ?>
+    </tbody>
+    </table>
+      </div>
+    </div>
+  </div>
+</div>
+<a
+            href="../login/logout.php"
+            type="submit"
+            class="inline-block px-3 py-2 bg-red-600 text-white uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+            data-mdb-ripple="true"
+            data-mdb-ripple-color="light">
+            Log Out
+          </a>
+</div>
 </body>
+</html>
 </html>
