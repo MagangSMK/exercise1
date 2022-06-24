@@ -1,13 +1,9 @@
-<?php
-include_once("../../config/config.php");
-?>
-<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Will Schenk</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
 
@@ -21,14 +17,13 @@ include_once("../../config/config.php");
 <!-- Material Icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 <link id="pagestyle" href="../../assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
-</head>
+  </head>
+  <body class="g-sidenav-show bg-slate-100 text-gray-800" >
 
-<body class="g-sidenav-show" >
-<div class="bg-slate-300 py-25 px-1 min-h-screen ">
   
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
 
-<div class="sidenav-header">
+<div class="sidenav-header ">
   <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
   <a class="navbar-brand m-0" href="../../login/homepage.php">
     <img src="../../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
@@ -75,7 +70,7 @@ include_once("../../config/config.php");
 
 
 <li class="nav-item">
-<a class="nav-link text-white " href="pelanggan.php">
+<a class="nav-link text-white " href="../pelanggan/pelanggan.php">
   
     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
       <i class="material-icons opacity-10">person</i>
@@ -101,7 +96,7 @@ include_once("../../config/config.php");
   </li>
 
 <li class="nav-item">
-<a class="nav-link text-white " href="../profile/profile.php">
+<a class="nav-link text-white " href="profile.php">
   
     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
       <i class="material-icons opacity-10">person</i>
@@ -121,67 +116,21 @@ include_once("../../config/config.php");
   
 </aside>
 <main class="main-content border-radius-lg ">
-
-<a
-            href="add.php"
-            type="submit"
-            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light">
-            Add New Pelanggan 
-          </a>
-<form method="get">
-    <label>Cari :</label>
-    <input type="text" name="cari3">
-    <input
-            type="submit"
-            value="Cari"
-            class="inline-block px-3 py-2 bg-slate-600 text-white uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light">
-</form>
-<?php
-if(isset($_GET['cari3'])){
-      $cari3 = $_GET['cari3'];
-      echo "<b>Hasil pencarian : ".$cari3."</b>";
-}
- ?>
-  <div class="flex flex-col">
-  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
-      <div class="overflow-hidden">
-    <table class="min-w-full text-center">
-    <thead class="border-b bg-gray-800">
-    <tr>
-     <th scope="col" class="text-sm font-medium text-white px-1 py-2">kode Pelanggan</th> 
-     <th scope="col" class="text-sm font-medium text-white px-1 py-2">Nama Pelanggan</th>
-     <th scope="col" class="text-sm font-medium text-white px-1 py-2">Alamat</th> 
-     <th scope="col" class="text-sm font-medium text-white px-1 py-2">Telepon</th>  
-     <th scope="col" class="text-sm font-medium text-white px-1 py-2">Update</th> 
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-        if(isset($_GET['cari3'])){
-            $cari3 = $_GET['cari3'];
-            $result2 = mysqli_query($mysqli,"select * from pelanggan where kodepelanggan Like '%".$cari3."%'");
-        } else{
-            $result2 = mysqli_query($mysqli, "SELECT * FROM pelanggan ORDER BY kodepelanggan ASC");
-        }
-    while($user_data2 = mysqli_fetch_array($result2)) {         
-        echo "<tr class='bg-white border-b'>";
-        echo "<td class='px-1 py-1 whitespace-nowrap text-sm font-medium text-gray-900'>".$kodepelanggan = $user_data2['kodepelanggan']."</td>";
-		    echo "<td class='px-1 py-1 whitespace-nowrap text-sm font-medium text-gray-900'>".$namapelanggan =$user_data2['namapelanggan']."</td>";
-	    	echo "<td class='px-1 py-1 whitespace-nowrap text-sm font-medium text-gray-900'>".$alamat = $user_data2['alamat']."</td>";
-		    echo "<td class='px-1 py-1 whitespace-nowrap text-sm font-medium text-gray-900'>".$telepon = $user_data2['telepon']."</td>";    
-        echo "<td class='px-1 py-1 whitespace-nowrap text-sm font-medium text-gray-900'><a  href='edit.php?kodepelanggan=$user_data2[kodepelanggan]'>Edit</a> | <a href='delete.php?kodepelanggan=$user_data2[kodepelanggan]'>Delete</a></td></tr>";
-    }
-    ?>
-    </tbody>
-    </table>
-      </div>
-    </div>
-  </div>
-  </div>
-</body>
+  <div class="bg-blue-500 pt-16 pb-20 shadow-lg">
+</div>
+<img src="../../pic/avatar.png" class="mx-auto rounded-full h-32 w-32 -mt-16 shadow-xl border-solid border-2 border-gray-300">
+<h1 class="pt-4 text-center text-4xl font-semibold tracking-tight">M Akbar Rafsanjani</h1>
+  <h2 class="pb-4 text-center text-cl font-light">COO, CoFounder</h2>
+      <p class="leading-relaxed text-justify">
+        Will focuses on overall internal management of HappyFunCorp,
+        which involves making sure that people are happy and productive,
+        that clients are happy with their projects. This involves
+        meetings and a lot of psycology.  It's rewarding when
+        the company is growing and thriving, but also very different
+        from time spent immersed in the fun of computers.
+        The career grew out of the hobby, and now that my daily job
+        is different from the hobby I can go back to being a
+        hobby programmer. Coding for the pleasure of it.
+      </p>
+  </body>
 </html>

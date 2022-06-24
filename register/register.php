@@ -2,6 +2,7 @@
 <html  lang="en">
 <head>
 <link rel="stylesheet" href="../public/css/style.css"	>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 	<div class="form-register">
 		<div class="register">
@@ -14,44 +15,22 @@
 				}
 			?>
 			<form method="POST" action="dataregis.php">			
-			<div class="bg-green-200 py-10 px-10 min-h-screen ">
-		
-  <!--   tip; mx-auto -- jagab ilusti keskele  -->
-  <div class="bg-white p-10 md:w-3/4 lg:w-1/2 mx-auto">
-      <!--       flex - asjad korvuti, nb! flex-1 - element kogu ylejaanud laius -->
-      <div class="flex items-center mb-5">
-        <!--         tip - here neede inline-block , but why? -->
-        <label for="username" class="inline-block w-20 mr-6 text-right 
-                                 font-bold text-gray-600">Username</label>
-        <input type="text"  name="username" placeholder="...." 
-               class="flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
-                      text-gray-600 placeholder-gray-400
-                      outline-none">
-      </div>
-
-      <div class="flex items-center mb-10">
-        <label for="sandi" class="inline-block w-20 mr-6 text-right
-                                    font-bold text-gray-600">Password</label>
-        <input type="password"  name="sandi" placeholder="...." 
-        class="flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
-                      text-gray-600 placeholder-gray-400
-                      outline-none"> <!-- check other class spec upper section -->
-      </div>
-      <div class="text-right">
-      <a
-            href="../index.php"
-            type="submit"
-            class="inline-block px-3 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light">
-            Go to Login Page
-          </a>
-        <input name="Submit" type="submit" class="py-3 px-2 bg-green-400 hover:bg-green-700 text-white font-bold" value="Register">
-      
-
-			</div>
-	</form>
-	</div>
+			<div class="flex justify-center items-center h-screen w-full bg-slate-600">
+    <div class="w-1/2 bg-slate-200 rounded shadow-2xl p-8 m-4">
+        <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">Register</h1>
+        <form action="/" method="post">
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" for="username">Username</label>
+                <input class="border py-2 px-3 text-grey-800" type="text" name="username" id="username">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="mb-2 font-bold text-lg text-gray-900" for="sandi">Password</label>
+                <input class="border py-2 px-3 text-grey-800" type="password" name="sandi" id="sandi">
+            </div>
+            <button class="block bg-green-600 hover:bg-green-700 text-white uppercase text-lg mx-auto p-4 rounded" type="submit">Create Account</button>
+        </form>
+        <p class="text-sm text-center">Already have an account?, <a href="../index.php" class="text-sm no-underline text-blue-500 hover:text-blue-700 float-none mb-4">Sign In</a></p> 
+    </div>
 </div>
 		</div>
 	</div>

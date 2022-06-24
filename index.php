@@ -1,88 +1,44 @@
+
 <?php
 include_once("config/config.php");
 ?>
-<html></html>
+<html>
 <head>
-	<title>Membuat Login</title>
-	<link rel="stylesheet" href="public/css/style.css"	>
-  
+    <title>Login Form</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class="bg-gray-200 py-25 px-1 min-h-screen ">
-  
-	<secttion class="h-screen">
-	<div class="container px-6 py-12 h-full">
-    <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
-      <div class="md:w-6/8 lg:w-6/8 mb-10 md:mb-0">
-        <table>
-        <div class="mb-4">
-    <td><img src="pic/images.jpg" class="max-w-full h-auto rounded-full" alt=""></td>
-    <td><img src="pic/images.jpg" class="max-w-full h-auto rounded-full" alt=""></td>
-    <td><img src="pic/images.jpg" class="max-w-full h-auto rounded-full" alt=""></td>
-  </div>
-      
-      </div>
-  </table>
-<!--username input-->
-<div class="bg-center">
-	<form
-     action="index.php" 
-     method="post" 
-     name="form5">
-     <div class="mb-6">
 
- 
-<input 
-type="text"  
-class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-name="username" 
-placeholder=" masukkan username"
-/>
-</div>
-<!--password-->
-<div class="mb-6">
-<input
-type="password" 
-class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-name="sandi" 
-placeholder="masukkan password"
-/>
-</div>	
-<div class="flex justify-between items-center mb-6">
-            <div class="form-group form-check">	
-            <input
-                type="checkbox"
-                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                id="exampleCheck3"
-                checked
-              />
-              <label class="form-check-label inline-block text-gray-800" for="exampleCheck2"
-                >Remember me</label>	
-                <td>|</td>	
-                <a
-              href="register/register.php"
-              class="text-blue-600 hover:text-blue-700 focus:text-blue-700 active:text-blue-800 duration-200 transition ease-in-out"
-              >Don't have an account?,Please register</a>
-              <!--tombol submit-->
-              <button
-            type="submit"
-            class="inline-block px-2 py-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light">
-            Sign in
-          </button>
-
-          <div
-            class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
-          >
-          </div>
-
-	</form>
-
-	  </div>
-	</div>
-	</div>
-	</secttion>
-	<?php 
+<body class="bg-gray-300" style="font-family:Roboto">
+    <div class="w-full h-screen flex items-center justify-center">
+        <form   action="index.php" method="post" name="form5" class="w-full md:w-1/3 bg-white rounded-lg">
+            <div class="flex font-bold justify-center mt-6">
+                <img class="h-20 w-20"
+                    src="https://raw.githubusercontent.com/sefyudem/Responsive-Login-Form/master/img/avatar.svg">
+            </div>
+            <h2 class="text-3xl text-center text-gray-700 mb-4">Login Form</h2>
+            <div class="px-12 pb-10">
+                <div class="w-full mb-2">
+                    <div class="flex items-center">
+                        <i class='ml-3 fill-current text-gray-400 text-xs z-10 fas fa-user'></i>
+                        <input name="username" type='text' placeholder="Username"
+                            class="-mx-6 px-8  w-full border rounded px-3 py-2 text-gray-700 focus:outline-none" />
+                    </div>
+                </div>
+                <div class="w-full mb-2">
+                    <div class="flex items-center">
+                        <i class='ml-3 fill-current text-gray-400 text-xs z-10 fas fa-lock'></i>
+                        <input name="sandi" type='text' placeholder="Password"
+                            class="-mx-6 px-8 w-full border rounded px-3 py-2 text-gray-700 focus:outline-none" />
+                    </div>
+                </div>
+                <p class="text-sm">Don't have an account?,Let's <a href="register/register.php" class="text-sm text-blue-500 hover:text-blue-700 float-none mb-4">Sign Up</a></p>
+                <button type="submit"
+                    class="w-full py-2 rounded-full bg-green-600  hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg text-gray-100  focus:outline-none">Sign In</button>    
+        </form>
+    </div>
+    <?php 
 include 'config/config.php';
 
 $username = $_POST['username'];
@@ -99,7 +55,5 @@ if($cek <=0){
 
 ?>
 </body>
+
 </html>
-
-
-
