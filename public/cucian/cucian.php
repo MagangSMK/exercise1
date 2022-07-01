@@ -40,15 +40,6 @@ include_once("../../config/config.php");
 
 <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
   <ul class="navbar-nav">
-    
-
-    
-      
-
-        
-
-        
-
 <li class="nav-item">
 <a class="nav-link text-white " href="cucian.php">
   
@@ -120,14 +111,15 @@ include_once("../../config/config.php");
   
 </aside>
 <main class="main-content border-radius-lg ">    
+  <div class="py-3">
 <a
             href="add.php"
             type="submit"
-            class="inline-block px-4 py-3 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
+            class="inline-block px-2 py-1 bg-green-600 text-white uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light">
             Tambah Cucian
-          </a>
+          </a></div>
 <form method="get">
     <label>Cari :</label>
     <input type="text" name="cari">

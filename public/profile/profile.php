@@ -36,15 +36,6 @@
 
 <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
   <ul class="navbar-nav">
-    
-
-    
-      
-
-        
-
-        
-
 <li class="nav-item">
 <a class="nav-link text-white " href="../cucian/cucian.php">
   

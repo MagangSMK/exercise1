@@ -124,9 +124,10 @@ include_once("../config/config.php");
 <main class="main-content border-radius-lg ">
 <?php 
 session_start();
-
 ?>
+<div class="py-3">
     <p class="text-bold">Selamat Datang</p>
+</div>
     <H1>
     Admin
   </h1>

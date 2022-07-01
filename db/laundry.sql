@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2022 at 03:42 AM
+-- Generation Time: Jun 27, 2022 at 03:41 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -40,7 +40,8 @@ CREATE TABLE `cucian` (
 --
 
 INSERT INTO `cucian` (`kodecucian`, `jumlahpotong`, `jeniscucian`, `berat_kg`, `harga`) VALUES
-('111', 1, 'cuci', 2, 15000);
+('111', 1, 'cuci', 2, 15000),
+('222', 3, 'cuci', 44, 15000);
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,8 @@ CREATE TABLE `karyawan` (
 --
 
 INSERT INTO `karyawan` (`kodekaryawan`, `namakaryawan`, `jeniskelamin`, `alamat`, `kota`, `jabatan`) VALUES
-('111', 'ali', 'lelaki', 'baloi', 'batam', 'penggosok');
+('111', 'ria', 'lanang', 'baloi', 'tanjung Pinang', 'penggosok'),
+('222', 'bani', 'lelaki', 'bengkong', 'batam', 'admin');
 
 -- --------------------------------------------------------
 
@@ -80,8 +82,8 @@ CREATE TABLE `log_in` (
 --
 
 INSERT INTO `log_in` (`username`, `sandi`) VALUES
-('abc', '2'),
-('admin', '1');
+('', 'c4f6tb2qv6yt543vcf'),
+('abc', '2');
 
 -- --------------------------------------------------------
 
@@ -101,7 +103,8 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`kodepelanggan`, `namapelanggan`, `alamat`, `telepon`) VALUES
-('111', 'leha', 'baloi', 9221);
+('111', 'agus', 'balai', 8122423),
+('222', 'leha', 'bengkong', 0);
 
 -- --------------------------------------------------------
 
@@ -124,7 +127,8 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`kodetransaksi`, `kodekaryawan`, `kodepelanggan`, `kodecucian`, `tanggalmasuk`, `tanggalkeluar`, `jumlah`) VALUES
-('111', '111', '111', '111', '2022-06-01', '2022-06-03', 2);
+('111', '111', '111', '111', '2022-06-01', '2022-06-03', 2),
+('222', '222', '222', '222', '2022-06-13', '2022-06-15', 50000);
 
 --
 -- Indexes for dumped tables
