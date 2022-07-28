@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="../public/css/style.css"	>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body>
 	<div class="form-register">
 		<div class="register">
 
@@ -32,6 +33,7 @@
         <p class="text-sm text-center">Already have an account?, <a href="../index.php" class="text-sm no-underline text-blue-500 hover:text-blue-700 float-none mb-4">Sign In</a></p> 
     </div>
 </div>
+            </from>
 		</div>
 	</div>
 </body>

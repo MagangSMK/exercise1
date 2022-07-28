@@ -99,7 +99,7 @@ include_once("../../config/config.php");
             data-mdb-ripple-color="light">
             Go to homepage
           </a>
-        <input name="Submit" type="submit" class="py-3 px-2 bg-green-400 hover:bg-green-700 text-white font-bold" value="Tambah Cucian">
+        <input name="Submit" type="submit" class="py-3 px-2 bg-green-400 hover:bg-green-700 text-white font-bold" value="Tambah Transaksi">
       
 		
 	<?php
